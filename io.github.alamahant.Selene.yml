@@ -11,7 +11,7 @@ finish-args:
   - --socket=pulseaudio
   - --device=dri
   - --share=network
-  - --filesystem=xdg-documents
+  - --filesystem=xdg-documents/Selene:create
 
 modules:
   - name: Selene
