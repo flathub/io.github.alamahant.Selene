@@ -4,7 +4,7 @@ All notable changes to Selene will be documented in this file.
 
 ## [1.0.2] - 2025-08-15
 ### Changed
-- Reverted back to using `~/Documents/Selene` as Selene's data location after Flathub graciously granted the `--filesystem=xdg-documents` permission
+- Reverted back to using `~/Documents/Selene` as Selene's data location after Flathub graciously granted the `--filesystem=xdg-documents/Selene:create` permission
 - Improved mute/unmute functionality to include the startup welcome tone
 
 ## [1.0.1] - 2025-08-13
