@@ -11,6 +11,7 @@ finish-args:
   - --socket=pulseaudio
   - --device=dri
   - --share=network
+  - --filesystem=xdg-download:ro # Needed for easy access to downloaded contact files from peers.
   - --filesystem=xdg-documents/Selene:create
 
 modules:
@@ -33,8 +34,8 @@ modules:
       # Main application source
       - type: git
         url: https://github.com/alamahant/Selene.git
-        tag: v1.0.4
-        commit: c2a8144e4012c162ab5b52497f6cddab635146bf
+        tag: v1.0.5
+        commit: bae60c13ae338e9efad386cb741cb2973e49a208
     cleanup:
       - /include
       - /lib/*.a
