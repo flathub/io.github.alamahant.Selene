@@ -20,6 +20,7 @@ modules:
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
       - -DFLATHUB_BUILD=ON
+      - -DBUILD_CURL=OFF
     sources:
       # libevent source code
       - type: git
@@ -34,8 +35,9 @@ modules:
       # Main application source
       - type: git
         url: https://github.com/alamahant/Selene.git
-        tag: v1.0.5
-        commit: bae60c13ae338e9efad386cb741cb2973e49a208
+        tag: v1.0.6
+        commit: 8ec26c6baa09407430c735e86aae2f12e5396d9f
+
     cleanup:
       - /include
       - /lib/*.a
@@ -43,3 +45,4 @@ modules:
       - /share/man
       - /lib/cmake
       - /lib/pkgconfig
+
