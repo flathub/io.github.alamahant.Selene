@@ -25,18 +25,18 @@ modules:
       # libevent source code
       - type: git
         url: https://github.com/libevent/libevent.git
-        tag: release-2.1.12-stable
+        tag: release-2.1.13-stable
         dest: libevent_src
       # tor source code
       - type: git
         url: https://gitlab.torproject.org/tpo/core/tor.git
-        tag: release-0.4.8
+        tag: release-0.4.9
         dest: tor_src
       # Main application source
       - type: git
         url: https://github.com/alamahant/Selene.git
-        tag: v1.0.8
-        commit: 3c8f013ad52d257cb88e6d47d684603320d2873a
+        tag: v1.0.9
+        commit: 81e9f92f22e5dd1ada7ef319d22dcd2024132ac5
 
     cleanup:
       - /include
