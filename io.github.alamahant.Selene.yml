@@ -1,6 +1,6 @@
 app-id: io.github.alamahant.Selene
 runtime: org.kde.Platform
-runtime-version: '6.10'
+runtime-version: '6.11'
 sdk: org.kde.Sdk
 command: Selene
 
@@ -35,8 +35,8 @@ modules:
       # Main application source
       - type: git
         url: https://github.com/alamahant/Selene.git
-        tag: v1.0.7
-        commit: e6c9c641149f065c29d64dcfcfdca267a2f49eda
+        tag: v1.0.8
+        commit: 3c8f013ad52d257cb88e6d47d684603320d2873a
 
     cleanup:
       - /include
