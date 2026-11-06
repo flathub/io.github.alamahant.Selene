@@ -1,14 +1,21 @@
 
-# 🌸 Selene
+# Selene
 
 ![Selene Screenshot](screenshots/Selene-Chatting-in-action.png)
 
 **Selene** is a comprehensive peer-to-peer chat and file sharing application built on the Tor network.  
 It enables secure, private communication and seamless file transfers between users, leveraging the anonymity and resilience of Tor.
 
+## Download Options
+
+| Platform | Where to Get It |
+| :--- | :--- |
+| **Linux** | [Flathub](https://flathub.org/en/apps/search?q=alamahant) |
+| **Windows and Mac** | [Buy on Gumroad](https://jnanadhakini.gumroad.com/) - Pre-compiled binary, no compilation needed |
+
 ---
 
-## 🚀 Distribution
+## Distribution
 
 - **Flatpak:**  
   The initial release of Selene will be available on [Flathub](https://flathub.org/).
@@ -17,7 +24,7 @@ It enables secure, private communication and seamless file transfers between use
 
 ---
 
-## 🛠️ Key Features
+## Key Features
 
 - **True Peer-to-Peer Messaging:**  
   Messages travel exclusively over the Tor network, never leaving Tor at any point.
@@ -28,9 +35,15 @@ It enables secure, private communication and seamless file transfers between use
 - **File Sharing via Ephemeral Tor Hidden Service HTTP Servers:**  
   Recipients access files directly using the provided onion address in Tor Browser or any Tor-enabled private window.
 
+- **Peer-to-Peer Mail Over Tor:**  
+  Send and receive real email at `<you>@<your-onion>.onion` with no account, no relay, and no third-party server. Your mail server is the app itself — direct SMTP delivery peer to peer through Tor.
+
+- **One-Way Dropbox Over Tor:**  
+  Share a drop link and anyone can send you a file through Tor Browser, no account needed. Files land in your Downloads folder, every upload is logged, and the link works only while you keep it open.
+
 ---
 
-## ✨ Feature Highlights
+## Feature Highlights
 
 - **Request New Tor Circuit:**  
   Instantly request a new Tor circuit to improve connectivity and reduce delays, ensuring reliable communication even in challenging network conditions.
@@ -71,22 +84,28 @@ It enables secure, private communication and seamless file transfers between use
 - **Password Protection at Startup:**  
   Enhance your privacy with optional password protection. When enabled, Selene requires a master password at startup to access your data. The system supports secure password creation, change, and validation, with robust SHA-256 hashing and salting. After multiple failed attempts, users can choose to exit or perform a factory reset. Password protection can be enabled or disabled at any time for flexible security management.
 
+- **Mail — Compose, Inbox, Attachments:**  
+  A full mail tab: Compose with To/Subject/Body and an active-account selector, Sent and Failed lists with one-click retry, and an Inbox that updates live as messages arrive. Attachments are staged on your HTTP onion and shared as links in the message body. New mail plays a sound. The receiver starts and stops from a single button on the Inbox tab — it runs only when you want it to.
+
+- **Dropbox — Anonymous One-Way Uploads:**  
+  Enable the Dropbox site and share its onion URL. Anyone who opens it in Tor Browser sees a simple upload form and can send you a file without a Tor account, a Selene install, or knowing who you are. Uploads land in your Downloads folder under their original name (with a prefix added if a file with that name already exists), and each one is recorded in `dropbox.log` with the time, the drop link, the filename, and the size. Disable the site or stop the app to revoke access.
+
 ---
 
-## 🖥️ Platform
+## Platform
 
 - **Built with:** Qt Framework
 - **Platform:** Cross-platform (Linux, Windows, others via Qt)
 
 ---
 
-## ❤️ About
+## About
 
 Selene is designed for privacy advocates and secure communication enthusiasts, offering a robust suite of features for confidential, flexible, and user-friendly Tor-based messaging and file sharing.
 
 ---
 
-## 📄 License
+## License
 
 This program is free software: you can redistribute it and/or modify  
 it under the terms of the GNU General Public License as published by  
@@ -105,7 +124,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 ---
 
-## 🙏 Credits
+## Credits
 
 **Framework:**  
 - Qt Framework (https://www.qt.io/)  
@@ -126,5 +145,5 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   Licensed under the SIL Open Font License, Version 1.1  
   Copyright © 2013 Google Inc.
 
-_Made with ❤️ for privacy advocates and secure communication enthusiasts_
+
 
