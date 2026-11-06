@@ -37,8 +37,8 @@ modules:
       # Main application source
       - type: git
         url: https://github.com/alamahant/Selene.git
-        tag: v1.1.1
-        commit: 6ec0eb263e977ba15fd865a808a255de01b93681
+        tag: v1.1.2
+        commit: 8a2eca27cc2520947d56e5cb0591940f50596e83
 
     cleanup:
       - /include
