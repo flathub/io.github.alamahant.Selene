@@ -2,6 +2,26 @@
 
 All notable changes to Selene will be documented in this file.
 
+## [1.1.3] - 2026-11-10
+
+### Added
+- **Post-Quantum Encryption**: Chat and mail can now encrypt with ML-KEM-768, a post-quantum algorithm. When both sides have a PQ key, it is used automatically. RSA remains as a fallback.
+- **Post-Quantum Keys**: A new keypair type, generated from the Security menu alongside RSA. Both keys travel together in the same `.contact` file.
+- **Mail Encryption**: Compose tab has an Encrypt button that turns the body into an encrypted message, and back again for editing. Inbox has a Decrypt button for reading encrypted mail.
+- **Mail Reply**: Reply from the Inbox — fills in the recipient, the subject, and the original message as a quote.
+- **Mail Delete**: Select one or more messages in Inbox, Sent, or Failed and move them to Trash. Empty Trash clears them permanently.
+- **Mail Sent/Failed Records**: Sent mail shows the original text you wrote. Failed mail keeps the encrypted content so Retry can resend it exactly as it was.
+- **Mail Guide**: A Quick Guide on the Mail dialog explaining how to send, receive, encrypt, and exchange keys.
+
+### Fixed
+- **Mail Sending**: Sending no longer fails on a fresh Tor connection. The circuit is warmed up before the mail is handed off.
+- **Mail Receiving**: Incoming mail now appears reliably, and the receiver can be stopped and started without leaving a port stuck.
+- **Mail Startup**: Any leftover mail processes from a previous crash are cleared automatically at launch.
+- **Mail Decryption**: Encrypted mail decrypts reliably, including long messages and messages received after an app restart.
+- **Mail Accounts**: Creating or switching between mail accounts no longer crashes the dialog.
+
+---
+
 ## [1.1.2] - 2026-11-06
 
 ### Added

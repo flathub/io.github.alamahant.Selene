@@ -32,6 +32,9 @@ It enables secure, private communication and seamless file transfers between use
 - **End-to-End RSA Encryption:**  
   Messages are encrypted with selectable key lengths: 2048, 4096, or 8192 bits.
 
+- **Post-Quantum Encryption:**  
+  Chat and mail can be encrypted with ML-KEM-768, a post-quantum algorithm designed to resist future quantum computers. When both sides have a PQ key, it is used automatically. RSA remains as a fallback for contacts without one.
+
 - **File Sharing via Ephemeral Tor Hidden Service HTTP Servers:**  
   Recipients access files directly using the provided onion address in Tor Browser or any Tor-enabled private window.
 
@@ -71,6 +74,12 @@ It enables secure, private communication and seamless file transfers between use
 
 - **Per-Peer Encryption Control:**  
   Enable or disable additional encryption for each peer using a simple checkbox, tailoring security to your needs.
+
+- **Post-Quantum Keys & Encryption:**  
+  Generate a Post-Quantum keypair from the Security menu alongside your RSA keypair. Both keys travel together in the same `.contact` file, so a single exchange gives the peer everything needed. Encryption prefers PQ (ML-KEM-768) when both sides have it, and falls back to RSA when they don't. The body is always encrypted with AES-256-GCM; the key exchange is what upgrades from RSA to PQ. Chat and mail both use the same mechanism, so a peer who can read your encrypted messages can also read your encrypted mail.
+
+- **Mail Encryption:**  
+  Compose has an Encrypt button that turns the message body into an encrypted block, and back again for editing. The Inbox has a Decrypt button that reads encrypted mail using your PQ private key. Encrypted messages are marked on the wire, so the receiver always knows which algorithm was used. The `.eml` on disk stays encrypted — Decrypt only affects the view. Long messages work: the body is AES-encrypted, not RSA-encrypted, so there is no size limit.
 
 - **Factory Reset:**  
   Restore the app to its original state with a single action. All data is wiped except for contacts and shared files stored in `~/Documents/Selene`.
